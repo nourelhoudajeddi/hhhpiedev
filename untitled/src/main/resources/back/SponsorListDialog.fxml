@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<?import javafx.geometry.Insets?>
+<VBox xmlns="http://javafx.com/javafx/8.0.171"
+      xmlns:fx="http://javafx.com/fxml/1"
+      spacing="10"
+      styleClass="linear-grad">
+
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <TableView fx:id="sponsorTable">
+        <columns>
+            <TableColumn text="Organization" prefWidth="200">
+                <cellValueFactory>
+                    <PropertyValueFactory property="sponsorName"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Amount" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="montant"/>
+                </cellValueFactory>
+            </TableColumn>            <TableColumn text="Email" prefWidth="200">
+                <cellValueFactory>
+                    <PropertyValueFactory property="email"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="actionsCol" text="Actions" prefWidth="100">
+                <!-- Will be configured in the controller -->
+            </TableColumn>
+        </columns>
+    </TableView>
+
+    <Button text="Close" styleClass="button4" onAction="#handleClose"/>
+</VBox>

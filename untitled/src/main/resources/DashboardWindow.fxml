@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.geometry.Insets?>
+<VBox xmlns="http://javafx.com/javafx/8.0.171"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.esprit.gui.DashboardController"
+      alignment="CENTER"
+      spacing="20"
+      styleClass="linear-grad">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Button text="Back Office" styleClass="button4" onAction="#openBackOffice"/>
+    <Button text="Front Office" styleClass="button4" onAction="#openFrontOffice"/>
+</VBox>

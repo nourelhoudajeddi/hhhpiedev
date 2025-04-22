@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<BorderPane styleClass="linear-grad" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.esprit.gui.back.EventManagementController">
+
+    <!-- Center Table Panel -->
+    <center>
+        <VBox spacing="10" alignment="CENTER">
+            <Label text="Events" styleClass="table-title" />
+            <TableView fx:id="eventTable">
+                <columns>
+                    <TableColumn fx:id="idCol" text="ID">
+                        <cellValueFactory><PropertyValueFactory property="id"/></cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="nameCol" text="Name">
+                        <cellValueFactory><PropertyValueFactory property="eventName"/></cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="descCol" text="Description">
+                        <cellValueFactory><PropertyValueFactory property="eventDescription"/></cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="locCol" text="Location">
+                        <cellValueFactory><PropertyValueFactory property="location"/></cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="dateCol" text="Date">
+                        <cellValueFactory><PropertyValueFactory property="eventDate"/></cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="statusCol" text="Status">
+                        <cellValueFactory><PropertyValueFactory property="status"/></cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="actionsCol" text="Actions">
+                        <!-- This will be handled in the controller -->
+                    </TableColumn>
+                </columns>
+            </TableView>
+
+            <Label text="Attendees" styleClass="table-title" />
+            <TableView fx:id="attendeeTable">
+                <columns>
+                    <TableColumn fx:id="attendeeIdCol" text="ID" />
+                    <TableColumn fx:id="attendeeNameCol" text="Name" />
+                    <TableColumn fx:id="attendeeEmailCol" text="Email" />
+                    <TableColumn fx:id="attendeePhoneCol" text="Phone" /> <!-- Added column for phone number -->
+                    <TableColumn fx:id="attendeeEventCol" text="Event" /> <!-- Added column for event name -->
+                    <TableColumn fx:id="attendeeActionsCol" text="Actions" />
+                </columns>
+            </TableView>
+
+            <Label text="Sponsors" styleClass="table-title" />
+            <TableView fx:id="sponsorTable">
+                <columns>
+                    <TableColumn fx:id="sponsorIdCol" text="ID" />
+                    <TableColumn fx:id="sponsorNameCol" text="Name" />
+                    <TableColumn fx:id="sponsorEventCol" text="Event" /> <!-- Added column for event name -->
+                    <TableColumn fx:id="sponsorContributionCol" text="Contribution" />
+                    <TableColumn fx:id="sponsorActionsCol" text="Actions" />
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+    <!-- Bottom Button Panel -->
+    <bottom>
+        <HBox alignment="CENTER" spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10" />
+            </padding>
+            <children>
+                <Button text="Add New Event" styleClass="button4" onAction="#showAddEventDialog" />
+                <Button text="Back to Dashboard" styleClass="button4" onAction="#backToDashboard" />
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>

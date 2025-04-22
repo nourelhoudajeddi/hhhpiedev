@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<DialogPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.esprit.gui.back.EventDialogController"
+            style="-fx-background-color: #E8F5E9; -fx-border-color: #81C784; -fx-border-width: 2; -fx-border-radius: 10;">
+    <buttonTypes>
+        <ButtonType fx:constant="OK" />
+        <ButtonType fx:constant="CANCEL" />
+    </buttonTypes>
+    <content>
+        <VBox alignment="TOP_LEFT" spacing="15" style="-fx-background-color: #A5D6A7; -fx-padding: 20; -fx-border-radius: 10;">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20" />
+            </padding>
+            <children>
+                <Label text="Event Name:" style="-fx-text-fill: #1B5E20; -fx-font-weight: bold;" />
+                <TextField fx:id="eventNameField" promptText="Event Name" />
+
+                <Label text="Description:" style="-fx-text-fill: #1B5E20; -fx-font-weight: bold;" />
+                <TextField fx:id="descriptionField" promptText="Description" />
+
+                <Label text="Location:" style="-fx-text-fill: #1B5E20; -fx-font-weight: bold;" />
+                <TextField fx:id="locationField" promptText="Location" />
+
+                <Label text="Date:" style="-fx-text-fill: #1B5E20; -fx-font-weight: bold;" />
+                <DatePicker fx:id="datePicker" promptText="Event Date" />
+
+                <Label text="Status:" style="-fx-text-fill: #1B5E20; -fx-font-weight: bold;" />
+                <ComboBox fx:id="statusComboBox" promptText="Status" styleClass="combo-box" />
+            </children>
+        </VBox>
+    </content>
+</DialogPane>
