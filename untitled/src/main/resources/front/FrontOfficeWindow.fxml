@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import java.net.URL?>
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.esprit.gui.front.FrontOfficeController"
+            stylesheets="@../styles/front-office.css">
+
+    <stylesheets>
+        <URL value="@../styles/front-office.css" />
+    </stylesheets>
+
+    <top>
+        <HBox alignment="CENTER" style="-fx-background-color: #1E3D32;">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <Label text="Upcoming Events" styleClass="title-label"/>
+        </HBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" styleClass="scroll-pane">
+            <FlowPane fx:id="eventCardsContainer" hgap="20" vgap="20" alignment="CENTER">
+                <padding>
+                    <Insets top="20" right="20" bottom="20" left="20"/>
+                </padding>
+            </FlowPane>
+        </ScrollPane>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER" spacing="20" style="-fx-background-color: #1E3D32;">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <Button text="Back to Dashboard" styleClass="button4" onAction="#backToDashboard"/>
+        </HBox>
+    </bottom>
+</BorderPane>

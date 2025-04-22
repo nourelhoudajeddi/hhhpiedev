@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<DialogPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.esprit.gui.back.SponsorDialogController">
+    <buttonTypes>
+        <ButtonType fx:constant="OK" />
+        <ButtonType fx:constant="CANCEL" />
+    </buttonTypes>
+    <content>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label text="Organization Name:" />
+            <TextField fx:id="sponsorNameField" promptText="Organization Name" />
+            
+            <Label text="Sponsorship Amount:" />
+            <TextField fx:id="amountField" promptText="Amount" />
+            
+            <Label text="Email:" />
+            <TextField fx:id="emailField" promptText="Email Address" />
+        </VBox>
+    </content>
+</DialogPane>
